@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The official website of Delia Archer, romance author.">
+<title>Delia Archer | Romance Author</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home" class="home-page">
+<header class="site-header home-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" data-author>Delia Archer</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="books.html" data-nav="books">Books</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="coming-soon.html" data-nav="coming">Coming Soon</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="aesthetic-hero" aria-label="Delia Archer">
+    <div class="hero-slides" aria-hidden="true">
+      <div class="hero-slide hero-scene scene-one active"></div>
+      <div class="hero-slide hero-scene scene-two"></div>
+      <div class="hero-slide hero-scene scene-three"></div>
+    </div>
+    <div class="hero-shade"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-center">
+      <p class="hero-kicker">ROMANCE AUTHOR</p>
+      <h1>Delia Archer</h1>
+      <p class="hero-tagline">Romance, stories, and worlds to get lost in.</p>
+      <div class="hero-line"></div>
+      <a class="hero-enter" href="books.html">Enter the library <span>→</span></a>
+    </div>
+
+    <div class="hero-bottom">
+      <span>ROMANCE</span>
+      <span class="dot">•</span>
+      <span>STORIES</span>
+      <span class="dot">•</span>
+      <span>OBSESSIONS</span>
+    </div>
+    <a class="scroll-cue" href="books.html" aria-label="Explore the books">Scroll to explore <span>↓</span></a>
+  </section>
+</main>
+
+<footer class="site-footer home-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand" data-author>Delia Archer</div>
+        <div>Romance author.</div>
+      </div>
+      <div class="footer-links">
+        <a href="books.html">Books</a>
+        <a href="about.html">About</a>
+        <a href="coming-soon.html">Coming Soon</a>
+        <a href="contact.html">Contact</a>
+        <span data-social-links></span>
+      </div>
+    </div>
+    <div class="copyright">© <span data-footer-year></span> Delia Archer. All rights reserved.</div>
+  </div>
+</footer>
+<script src="content.js"></script>
+<script src="site.js"></script>
+<script>
+(() => {
+  const slides = [...document.querySelectorAll('.hero-slide')];
+  if (slides.length < 2) return;
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 6500);
+})();
+</script>
+</body>
+</html>
