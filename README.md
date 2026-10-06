@@ -22,3 +22,4 @@ This is a static website: no Wix or Payhip account is required. Hosting/domain s
 
 
 Version 4 removes the three aesthetic reference photos from the homepage. They were inspiration only. The homepage now uses an original CSS visual treatment inspired by the warm, literary, cream-and-brown mood while retaining the black Delia Archer background and smooth crossfade effect.
+<!-- Pages deployment trigger -->
